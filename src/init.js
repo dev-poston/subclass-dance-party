@@ -3,6 +3,8 @@ $(document).ready(function() {
 
   $('.addDancerButton').on('click', function(event) {
 
+    console.log(event);
+
     var snazzyDancer = event.target.innerHTML;
 
     var snazzyDancers = {
@@ -14,7 +16,6 @@ $(document).ready(function() {
 
     var currentDancer = snazzyDancers[snazzyDancer];
     var dancerMakerFunctionName = $(this).data(currentDancer);
-
     var dancerMakerFunction = window[currentDancer];
 
     var dancer = new dancerMakerFunction (

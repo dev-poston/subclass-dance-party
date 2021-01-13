@@ -12,24 +12,10 @@ describe('oneAnimal', function() {
     expect(oneAnimal.$node).to.be.an.instanceof(jQuery);
   });
 
-  // it('should have a step function that makes its node blink', function() {
-  //   sinon.spy(oneAnimal.$node, 'toggle');
-  //   oneAnimal.step();
-  //   expect(oneAnimal.$node.toggle.called).to.be.true;
-  // });
-
-  // describe('dance', function() {
-  //   it('should call step at least once per second', function() {
-  //     sinon.spy(oneAnimal, 'step');
-  //     expect(oneAnimal.step.callCount).to.be.equal(0);
-  //     clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
-  //     //clock.tick(timeBetweenSteps);
-
-  //     expect(oneAnimal.step.callCount).to.be.equal(1);
-
-  //     clock.tick(timeBetweenSteps);
-  //     expect(oneAnimal.step.callCount).to.be.equal(2);
-  //   });
-  // });
+  it('should move around the page', function() {
+    sinon.spy(oneAnimal, 'step');
+    expect(oneAnimal.$node.top).to.not.equal(10);
+    expect(oneAnimal.$node.left).to.not.equal(20);
+  });
 
 });

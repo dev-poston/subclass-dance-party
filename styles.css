@@ -25,3 +25,14 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.oneAnimal{
+  border:10px solid green;
+  border-radius:10px;
+  position:absolute;
+}
+.twoAnimal, .animate__animated.animate__bounce {
+  border: 10px solid blue;
+  animation-duration: 2s;
+  border-radius: 10px;
+  position: absolute;
+}
