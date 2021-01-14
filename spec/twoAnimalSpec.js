@@ -13,9 +13,9 @@ describe('twoAnimal', function() {
   });
 
   it('should grow and shrink in size', function() {
-    //store its x/y
-    //run move function
-    //compare stored x/y with current x/y
+    sinon.spy(twoAnimal.$node, 'mouseover');
+    twoAnimal.step();
+    expect(twoAnimal.$node.mouseover.called).to.be.true;
   });
 
 });

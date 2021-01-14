@@ -12,7 +12,6 @@ TwoAnimal.prototype.step = function() {
 
   this.$node.removeClass('dancer').addClass('twoAnimal animate__animated animate__bounce');
 
-  //add shirk/grow on mouseover
   this.$node.mouseover(function () {
     $(this).css('cursor', 'pointer');
     $(this).animate({ width: '500px' }, 'slow');
@@ -28,6 +27,7 @@ TwoAnimal.prototype.step = function() {
   var newLeft = Math.random() * 500;
 
   var styleSettings = {
+
     top: newTop,
     left: newLeft,
 
