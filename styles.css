@@ -20,15 +20,15 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+.dancer {
+  border: 10px solid red;
+  border-radius: 10px;
+  position: absolute;
 }
-.oneAnimal{
-  border:10px solid green;
-  border-radius:10px;
-  position:absolute;
+.oneAnimal {
+  border: 10px solid green;
+  border-radius: 10px;
+  position: absolute;
 }
 .twoAnimal, .animate__animated.animate__bounce {
   border: 10px solid blue;
@@ -36,3 +36,10 @@ body, a:link, a:visited, a:active{
   border-radius: 10px;
   position: absolute;
 }
+#lineupArea {
+  border: 10px solid yellow;
+  height: 100px;
+  width: 800px;
+  position: flex;
+}
+
