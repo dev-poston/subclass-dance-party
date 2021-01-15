@@ -17,5 +17,4 @@ describe('twoAnimal', function() {
     twoAnimal.step();
     expect(twoAnimal.$node.mouseover.called).to.be.true;
   });
-
 });

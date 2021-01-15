@@ -14,7 +14,6 @@ MakeDancer.prototype.step = function() {
   setTimeout(() => {
     this.step();
   }, this.timeBetweenSteps);
-
 };
 
 MakeDancer.prototype.setPosition = function(top, left) {
@@ -25,7 +24,6 @@ MakeDancer.prototype.setPosition = function(top, left) {
   };
 
   this.$node.css(styleSettings);
-
 };
 
 MakeDancer.prototype.lineUp = function(newTop, newLeft) {
@@ -36,5 +34,4 @@ MakeDancer.prototype.lineUp = function(newTop, newLeft) {
   };
 
   this.$node.css(styleSettings);
-
 };

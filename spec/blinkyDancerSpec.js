@@ -31,5 +31,4 @@ describe('blinkyDancer', function() {
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
   });
-
 });

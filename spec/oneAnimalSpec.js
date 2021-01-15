@@ -17,5 +17,4 @@ describe('oneAnimal', function() {
     expect(oneAnimal.$node.top).to.not.equal(10);
     expect(oneAnimal.$node.left).to.not.equal(20);
   });
-
 });

@@ -1,7 +1,6 @@
 var OneAnimal = function(top, left, timeBetweenSteps) {
 
   MakeDancer.call(this, top, left, timeBetweenSteps);
-
 };
 
 OneAnimal.prototype = Object.create(MakeDancer.prototype);
@@ -22,6 +21,5 @@ OneAnimal.prototype.step = function() {
   };
 
   this.$node.animate(styleSettings);
-
 };
 
