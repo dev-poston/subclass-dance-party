@@ -37,4 +37,45 @@ $(document).ready(function() {
       dancer.lineUp(top, left);
     });
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // var getLocation = function(danceTeam) {
+  //   var target = {};
+
+  //   for (var i = 0; i < danceTeam.length; i++) {
+  //     var d = danceTeam[i];
+  //     if (d.$node[0].className === 'oneAnimal') {
+  //       target = d;
+  //       console.log(target);
+
+  //       console.log('woot');
+  //       continue;
+  //     }
+  //     var t = d.top;
+  //     var l = d.left;
+  //     if (target) {
+  //       target.detectCollision(t, l);
+  //       console.log(target);
+  //     }
+  //   }
+  // };
+
+  // setInterval(() => {
+  //   getLocation(window.dancers);
+  //   console.log('yay');
+  // }, 1000);
+
 });

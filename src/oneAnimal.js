@@ -23,3 +23,8 @@ OneAnimal.prototype.step = function() {
   this.$node.animate(styleSettings);
 };
 
+OneAnimal.prototype.detectCollision = function(x, y) {
+  var mathz = Math.sqrt(Math.pow(top, x) + Math.pow(left, y));
+  console.log(mathz);
+};
+
