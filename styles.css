@@ -36,8 +36,13 @@ body, a:link, a:visited, a:active{
   border-radius: 10px;
   position: absolute;
 }
-.twoAnimal, .animate__animated.animate__bounce {
+.twoAnimal {
   border: 10px solid blue;
+  animation-duration: 2s;
+  border-radius: 10px;
+  position: absolute;
+}
+.animate__animated.animate__bounce {
   animation-duration: 2s;
   border-radius: 10px;
   position: absolute;

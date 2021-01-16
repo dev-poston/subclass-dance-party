@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>position demo</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+  <style>
+  #targetElement {
+    height: 200px;
+    margin: 50px;
+    background: #9cf;
+  }
+  .positionDiv {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: #080;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<div id="targetElement">
+  <div class="positionDiv" id="position1"></div>
+  <div class="positionDiv" id="position2"></div>
+  <div class="positionDiv" id="position3"></div>
+  <div class="positionDiv" id="position4"></div>
+</div>
+
+<script>
+$( "#position1" ).position({
+  my: "center",
+  at: "center",
+  of: "#targetElement"
+});
+
+$( "#position2" ).position({
+  my: "left top",
+  at: "left top",
+  of: "#targetElement"
+});
+
+$( "#position3" ).position({
+  my: "right center",
+  at: "right bottom",
+  of: "#targetElement"
+});
+
+//position 1 is fixed in the center
+  //position4 is moving relative to it
+// $(document).mousemove(function(event) {
+
+  //every second, invoke move function and reposition 4 right 250 of position 1
+var move = function() {
+  $("#position4").position({
+    my: "right+250", //potentially randomize string
+    of: "#position1",
+    collision: "flipfit"
+  });
+};
+
+setInterval(()=> {
+  move();
+  console.log('hi')
+}, 1000);
+
+// });
+</script>
+
+</body>
+</html>

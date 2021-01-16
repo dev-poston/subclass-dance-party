@@ -38,44 +38,34 @@ $(document).ready(function() {
     });
   });
 
+  //"#position4" should be class oneanimal = .oneAnimal
+  //"#position1" target OGDancer - .dancer
 
+  //iterate over window.dancers and look to see if oneAnimal is presen
 
+  var move = function() {
+    var target = 'oneAnimal';
+    var t;
+    for (let i = 0; i < window.dancers.length; i++) {
+      if (window.dancers[i].$node.className === 'oneAnimal') {
+        t = window.dancers[i];
+        var targetLoc = t.$node.offset();
+        continue;
+      } else {
+        var other = window.dancers[i];
+        var otherLoc = other.$node.offset();
+        // console.log(targetLoc);
+        // console.log(otherLoc);
+        if (t) {
+          // t.loc(targetLoc, otherLoc);
+          t.step(targetLoc, otherLoc);
+        }
+      }
+    }
+  };
 
-
-
-
-
-
-
-
-
-
-
-
-  // var getLocation = function(danceTeam) {
-  //   var target = {};
-
-  //   for (var i = 0; i < danceTeam.length; i++) {
-  //     var d = danceTeam[i];
-  //     if (d.$node[0].className === 'oneAnimal') {
-  //       target = d;
-  //       console.log(target);
-
-  //       console.log('woot');
-  //       continue;
-  //     }
-  //     var t = d.top;
-  //     var l = d.left;
-  //     if (target) {
-  //       target.detectCollision(t, l);
-  //       console.log(target);
-  //     }
-  //   }
-  // };
-
-  // setInterval(() => {
-  //   getLocation(window.dancers);
-  //   console.log('yay');
-  // }, 1000);
+  setInterval(()=> {
+    move();
+  }, 100);
 
 });
