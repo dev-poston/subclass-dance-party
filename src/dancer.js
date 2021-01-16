@@ -5,7 +5,6 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancer"></span>');
-  //$(this.$node).append('<img src="bear.gif"/>');
 
   this.step();
   this.setPosition(this.top, this.left);
@@ -39,14 +38,14 @@ MakeDancer.prototype.lineUp = function(newTop, newLeft) {
 };
 
 MakeDancer.prototype.rotateDancer = function() {
-  let count = 0;
 
+  let count = 0;
   while (count < 4) {
     this.$node.toggleClass('flip');
   }
 
   $('#line').on('click', function(event) {
-    this.dispese();
+    this.disperse();
   });
 
 };

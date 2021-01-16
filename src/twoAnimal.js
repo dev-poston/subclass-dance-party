@@ -1,7 +1,7 @@
 var TwoAnimal = function(top, left, timeBetweenSteps) {
 
   MakeDancer.call(this, top, left, timeBetweenSteps);
-  $(this.$node).append('<img src="corgbutt.gif"/>');
+  $(this.$node).append('<img src="corgbutt.gif" style="width:150px;height:150px;"/>');
 
 };
 
@@ -15,13 +15,13 @@ TwoAnimal.prototype.step = function() {
 
   this.$node.mouseover(function () {
     $(this).css('cursor', 'pointer');
-    $(this).animate({ width: '500px' }, 'slow');
-    $(this).animate({ height: '500px' }, 'slow');
+    $(this).animate({ width: '300px' }, 'fast');
+    $(this).animate({ height: '300px' }, 'fast');
   });
 
   this.$node.mouseout(function () {
-    $(this).animate({ width: '200px' }, 'slow');
-    $(this).animate({ height: '200px' }, 'slow');
+    $(this).animate({ width: '150px' }, 'slow');
+    $(this).animate({ height: '150px' }, 'slow');
   });
 
   var newTop = Math.random() * 500;
