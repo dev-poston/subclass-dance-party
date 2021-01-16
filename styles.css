@@ -48,8 +48,8 @@ body, a:link, a:visited, a:active{
 }
 #line {
   color: RGB(107, 143, 105);
+  border: 2px solid RGB(90, 93, 94);
   font-style: bold;
-  border: 1px solid RGB: (62, 112, 132);
   font: inherit;
   line-height: 1;
   margin: 0.5em;
@@ -62,6 +62,7 @@ body, a:link, a:visited, a:active{
   transform: translateY(-0.25em);
 }
 .topbar{
+  display: inline-block;
   height:75px;
   background-color: #dedede;
 }
@@ -78,27 +79,24 @@ body, a:link, a:visited, a:active{
   width: 100vw;
 }
 .dancer {
-  border: 10px solid red;
-  border-radius: 10px;
   position: absolute;
 }
 .oneAnimal {
-  border: 10px solid green;
-  border-radius: 10px;
+  width: 150px;
+  height: 150px;
   position: absolute;
 }
 .twoAnimal {
-  border: 10px solid blue;
   animation-duration: 2s;
-  border-radius: 10px;
   position: absolute;
 }
 .animate__animated.animate__bounce {
   animation-duration: 2s;
-  border-radius: 10px;
   position: absolute;
 }
-
+.flip {
+  transform:  rotate(0.5turn);
+}
 
 
 

@@ -1,8 +1,10 @@
-// remove borders from gif
-// limit area of gifs
-// fix top bar
-// resize smaller gifs
-// squirrel goes back to top left every time
+//re-adjust the conga line
+//limit the areas of gifs - ground animals stay below certain top love it
+//squirrels stay in tree left? butterfly free roam above ooh luv it
+//  resize smaller gifs
+//    which do you mean: squirrel, cat?
+//squirrel goes back to top left every time???
+//make topbar responsive?
 
 
 $(document).ready(function() {
@@ -41,13 +43,17 @@ $(document).ready(function() {
 
   $('#line').on('click', function(event) {
 
-    let top = 500;
+    let top = 800;
     let left = 100;
 
     window.dancers.forEach(dancer => {
-      left += 50;
+      left += 250;
       dancer.lineUp(top, left);
+      setTimeout(() => {
+        dancer.rotateDancer();
+      }, 2000);
     });
+
   });
 
   var move = function() {

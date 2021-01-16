@@ -38,3 +38,21 @@ MakeDancer.prototype.lineUp = function(newTop, newLeft) {
   this.$node.css(styleSettings);
 };
 
+MakeDancer.prototype.rotateDancer = function() {
+  let count = 0;
+
+  while (count < 4) {
+    this.$node.toggleClass('flip');
+  }
+
+  $('#line').on('click', function(event) {
+    this.dispese();
+  });
+
+};
+
+MakeDancer.prototype.disperse = function() {
+  let newTop = this.top * Math.random();
+  let newLeft = this.left * Math.random();
+  this.setPostion(newTop, newLeft);
+};

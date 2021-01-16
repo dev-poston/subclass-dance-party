@@ -1,7 +1,7 @@
 var MakeSquirrel = function(top, left, timeBetweenSteps) {
 
   MakeDancer.call(this, top, left, timeBetweenSteps);
-  $(this.$node).append('<img src="squirrel.gif"/>');
+  $(this.$node).append('<img src="squirrel.gif" style="width:100px;height:100px;"/>');
 
 };
 

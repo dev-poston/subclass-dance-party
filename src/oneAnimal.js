@@ -2,7 +2,8 @@ var OneAnimal = function(top, left, timeBetweenSteps) {
 
   MakeDancer.call(this, top, left, timeBetweenSteps);
   this.$node.className = 'oneAnimal';
-  $(this.$node).append('<img src="butterfly.gif"/>');
+
+  $(this.$node).append('<img src="butterfly.gif" style="width:100px;height:100px;"/>');
 
 };
 
@@ -11,6 +12,7 @@ OneAnimal.prototype = Object.create(MakeDancer.prototype);
 OneAnimal.prototype.constructor = OneAnimal;
 
 OneAnimal.prototype.step = function(x, y) {
+
 
   var oldStep = MakeDancer.prototype.step.bind(this);
   oldStep();

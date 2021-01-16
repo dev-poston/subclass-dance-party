@@ -1,7 +1,7 @@
 var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
   MakeDancer.call(this, top, left, timeBetweenSteps);
-  $(this.$node).append('<img src="ravekat.gif"/>');
+  $(this.$node).append('<img src="ravekat.gif" style="width:150px;height:200px;"/>');
 
 };
 
