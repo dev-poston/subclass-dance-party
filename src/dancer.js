@@ -5,6 +5,8 @@ var MakeDancer = function(top, left, timeBetweenSteps) {
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancer"></span>');
+  //$(this.$node).append('<img src="bear.gif"/>');
+
   this.step();
   this.setPosition(this.top, this.left);
 };
@@ -36,10 +38,3 @@ MakeDancer.prototype.lineUp = function(newTop, newLeft) {
   this.$node.css(styleSettings);
 };
 
-
-
-// function pythagorean(sideA, sideB){
-//   return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
-// }
-
-// console.log(pythagorean(4, 3));

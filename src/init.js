@@ -1,16 +1,28 @@
+// remove borders from gif
+// limit area of gifs
+// fix top bar
+// resize smaller gifs
+// squirrel goes back to top left every time
+
+
 $(document).ready(function() {
 
   window.dancers = [];
 
   $('.addDancerButton').on('click', function(event) {
 
+    if ( window.dancers.length === 0) {
+      $('#audio')[0].play();
+    }
+
     var snazzyDancer = event.target.innerHTML;
 
     var snazzyDancers = {
-      'add an OG dancer': 'MakeDancer',
-      'add a blinky dancer': 'MakeBlinkyDancer',
-      'add an animal 1': 'OneAnimal',
-      'add an animal 2': 'TwoAnimal'
+      'add disco kat': 'MakeBlinkyDancer',
+      'add butterfly': 'OneAnimal',
+      'add corgi': 'TwoAnimal',
+      'add bear': 'MakeBear',
+      'add squirrel!': 'MakeSquirrel'
     };
 
     var currentDancer = snazzyDancers[snazzyDancer];
@@ -27,7 +39,7 @@ $(document).ready(function() {
     window.dancers.push(dancer);
   });
 
-  $('.line').on('click', function(event) {
+  $('#line').on('click', function(event) {
 
     let top = 500;
     let left = 100;
@@ -37,11 +49,6 @@ $(document).ready(function() {
       dancer.lineUp(top, left);
     });
   });
-
-  //"#position4" should be class oneanimal = .oneAnimal
-  //"#position1" target OGDancer - .dancer
-
-  //iterate over window.dancers and look to see if oneAnimal is presen
 
   var move = function() {
     var target = 'oneAnimal';
@@ -54,10 +61,7 @@ $(document).ready(function() {
       } else {
         var other = window.dancers[i];
         var otherLoc = other.$node.offset();
-        // console.log(targetLoc);
-        // console.log(otherLoc);
         if (t) {
-          // t.loc(targetLoc, otherLoc);
           t.step(targetLoc, otherLoc);
         }
       }

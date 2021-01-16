@@ -1,6 +1,8 @@
 var TwoAnimal = function(top, left, timeBetweenSteps) {
 
   MakeDancer.call(this, top, left, timeBetweenSteps);
+  $(this.$node).append('<img src="corgbutt.gif"/>');
+
 };
 
 TwoAnimal.prototype = Object.create(MakeDancer.prototype);

@@ -11,19 +11,28 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
+    <script src="src/dancingBear.js"></script>
+    <script src="src/dancingSquirrel.js"></script>
     <script src="src/oneAnimal.js"></script>
     <script src="src/twoAnimal.js"></script>
+
   </head>
   <body id="body">
-    <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="add an animal 2">add an animal 2</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="add an animal 1">add an animal 1</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="MakeDancer">add an OG dancer</a>
-      <a href="#" class="line" data-dancer-maker-function-name="lineUp">Conga Line</a>
+    <div class="topbar responsive">
+      <span class="title">OBJECT DANCE PARTY</span>
+      <div class="buttons">
+        <a href="#" class="addDancerButton raise" data-dancer-maker-function-name="add an animal 2">add corgi</a>
+        <a href="#" class="addDancerButton raise" data-dancer-maker-function-name="add an animal 1">add butterfly</a>
+        <a href="#" class="addDancerButton raise" data-dancer-maker-function-name="makeBlinkyDancer">add disco kat</a>
+        <a href="#" class="addDancerButton raise" data-dancer-maker-function-name="add bear">add bear</a>
+        <a href="#" class="addDancerButton raise" data-dancer-maker-function-name="add squirrel">add squirrel!</a>
+        <a href="#" id="line" class="raise" data-dancer-maker-function-name="lineUp">Conga Line</a>
+      </div>
     </div>
     <div id="lineupArea"></div>
+    <audio id="audio" src="sandstorm.mp3"></audio>
+    <audio id="fart" src="fart.mp3"></audio>
     <script src="src/init.js"></script>
   </body>
 </html>
+r
